@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.store-page {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CardsView {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.IconSwitch {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 15px 15px;
+}
+
+.IconSwitch-button {
+  color: grey;
+  cursor: pointer;
+}
+
+.IconSwitch-button .material-icons {
+  font-size: 36px;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  height: 300px;
+  margin: 20px 50px;
+  background-size: 300px 300px;
+  box-shadow: 4px 2px 4px #00000030;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  transform: scale(0.9, 1.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-color {
+  text-align: flex-end;
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 175px;
+  color: rgb(161, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-btn {
+  padding: 5px 10px;
+  border: 2px solid rgb(161, 0, 0);
+  border-radius: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.img {
+  width: 80%;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: red;
+}
+
+
+.ListView {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopItem-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  margin-bottom: 5px;
+  background-color: #f5f5f5;
+}
+
+.img-item {
+  width: 150px;
+  height: 80px;
+  background-size: 150px 150px;
+  background-position: 50% 70%;
+  object-fit: cover;
+}
+
+.item-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  transform: scale(0.9, 1.4);
+}
+
+.item-price {
+  color: rgb(161, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item-btn {
+  margin-right: 15px;
+  padding: 5px 10px;
+  border: 2px solid rgb(161, 0, 0);
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: rgb(161, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
