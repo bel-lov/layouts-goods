@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default function IconSwitch(props) {
-    const { icon, onSwitch } = props;
+export default function IconSwitch({ icon, onSwitch }) {
     return (
         <div className="IconSwitch">
             <div className="IconSwitch-button" onClick={onSwitch} onSwitch={() => console.log("change state here")}>

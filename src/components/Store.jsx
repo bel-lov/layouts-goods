@@ -35,25 +35,52 @@ const products = [{
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
 }];
 
+// export default function Store({ products }) {
+//     const [value, setValue] = useState('view-list');
 
-export { products }
+//     function changeView() {
+//         if (value === 'view_module') {
+//             return setValue('view_list');
+//         } else {
+//             return setValue('view_module');
+//         }
+//     }
 
-export default function Store({ products }) {
-    const [value, setValue] = useState('view-list');
+//     return (
+//         <div className="store-page">
+//             <IconSwitch icon={value} onSwitch={() => changeView()} />
+//             {value === 'view_module' ? <CardsView cards={products} /> : <ListView items={products} />}
+//         </div>
+//     );
+// }
 
-    function changeView() {
-        if (value === 'view_module') {
-            return setValue('view_list');
-        } else {
-            return setValue('view_module');
-        }
+export default function Store() {
+    let [state, setState] = useState("module");
+    let [icon, setIcon] = useState("view_module");
+
+    let module = () => {
+        return <CardsView products={products} />;
+    };
+    let list = () => {
+        return <ListView products={products} />;
     }
+    let view = state === "module" ? module() : list();
+
+    const onSwitch = () => {
+        let viewIcon = icon === "view_module" ? "view_list" : "view_module";
+        let view = state === "module" ? "list" : "module";
+        setIcon(icon = viewIcon);
+        setState(state = view);
+    };
 
     return (
         <div className="store-page">
-            <IconSwitch icon={value} onSwitch={() => changeView()} />
-            {value === 'view_module' ? <CardsView cards={products} /> : <ListView items={products} />}
+            <div className="store">
+                <IconSwitch icon={icon} onSwitch={onSwitch} />
+            </div>
+            <div className="view__conteiner">
+                {view}
+            </div>
         </div>
     );
 }
-

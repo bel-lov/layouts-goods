@@ -42,6 +42,12 @@
   box-shadow: 4px 2px 4px #00000030;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .title {
   text-align: center;
   font-size: 24px;
