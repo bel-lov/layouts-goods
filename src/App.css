@@ -8,7 +8,7 @@
   width: 1200px;
   margin: 0 auto;
   margin-top: 30px;
-  background-color: green;
+  background-color: rgb(159, 183, 159);
 }
 
 .CardsView {
@@ -36,9 +36,10 @@
   flex-direction: column;
   align-items: center;
   width: 300px;
-  height: 300px;
+  height: 400px;
   margin: 20px 50px;
   background-size: 300px 300px;
+  background-color: beige;
   box-shadow: 4px 2px 4px #00000030;
 }
 
@@ -61,6 +62,13 @@
   font-size: 16px;
 }
 
+.container-card {
+  display: flex;
+  width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .container {
   width: 80%;
   display: flex;
@@ -73,6 +81,7 @@
 }
 
 .card-btn {
+  height: 40px;
   padding: 5px 10px;
   border: 2px solid rgb(161, 0, 0);
   border-radius: 20px;
@@ -85,8 +94,6 @@
 }
 
 .card-price {
-  display: flex;
-  justify-content: space-evenly;
   margin-bottom: 20px;
   font-size: 20px;
   color: red;
